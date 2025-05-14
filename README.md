@@ -1,9 +1,3 @@
-# Kapamilya-Insert-New-kapamilya
-
-
-// Kapamilya.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 using namespace std;
 
@@ -153,6 +147,7 @@ void InsertKapamilya(int position)
 	{
 		cout << "Invalid Position!! " << endl;
 		system("pause");
+		return;
 	}
 
 	kapamilya* newKapamilya = new kapamilya;
@@ -225,14 +220,14 @@ int main() {
 		else if (choice == 6) {
 			addNewKAncestor();
 		}
-		else if(choice == 7)
+		else if (choice == 7)
 		{
 			int position;
 			cout << "Enter Your position to insert in Kapamilya: " << endl;
 			cin >> position;
+			InsertKapamilya(position); // <<< FIXED: Function call added
 		}
 	} while (choice != 8);
 
 	return 0;
 }
-
